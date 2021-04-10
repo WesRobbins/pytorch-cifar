@@ -121,6 +121,9 @@ class DLA(nn.Module):
         out = out.view(out.size(0), -1)
         out = self.linear(out)
         return out
+    
+    def get_logits(self, x):
+        return self.forward(x)
 
 
 def test():
