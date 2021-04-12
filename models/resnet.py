@@ -69,7 +69,7 @@ class Bottleneck(nn.Module):
         out = F.relu(out)
         return out
 
-
+@art.wrappers.ClassifierWrapper
 class ResNet(nn.Module):
     def __init__(self, block, num_blocks, num_classes=10):
         super(ResNet, self).__init__()
